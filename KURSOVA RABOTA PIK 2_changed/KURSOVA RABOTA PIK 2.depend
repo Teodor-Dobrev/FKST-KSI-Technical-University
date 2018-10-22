@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1525453929 source:d:\school&uni\c_programming\kursova rabota pik 2\main.c
+	"mail.h"
+
+1526081758 source:d:\school&uni\c_programming\kursova rabota pik 2\mail.c
+	"mail.h"
+	<time.h>
+
+1525453597 d:\school&uni\c_programming\kursova rabota pik 2\mail.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<conio.h>
+
+1526750858 source:d:\school&uni\programming\c_programming\kursova rabota pik 2\mail.c
+	"mail.h"
+	<time.h>
+
+1525453597 d:\school&uni\programming\c_programming\kursova rabota pik 2\mail.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<conio.h>
+
+1526742752 source:d:\school&uni\programming\c_programming\kursova rabota pik 2\main.c
+	"mail.h"
+
+1526941977 source:d:\school&uni\programming\c_programming\kursova rabota pik 2 - copy\mail.c
+	"mail.h"
+	<time.h>
+
+1525453597 d:\school&uni\programming\c_programming\kursova rabota pik 2 - copy\mail.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<conio.h>
+
+1526940063 source:d:\school&uni\programming\c_programming\kursova rabota pik 2 - copy\main.c
+	"mail.h"
+
+1526940063 source:d:\school&uni\programming\c_programming\kursova rabota pik 2_changed\main.c
+	"mail.h"
+
+1525453597 d:\school&uni\programming\c_programming\kursova rabota pik 2_changed\mail.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<conio.h>
+
+1527186735 source:d:\school&uni\programming\c_programming\kursova rabota pik 2_changed\mail.c
+	"mail.h"
+	<time.h>
+
