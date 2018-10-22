@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/x3dom/release/x3dom.css'></link>
+    <script type='text/javascript' src='http://www.x3dom.org/x3dom/release/x3dom.js'></script>
+	<title>T.Dobrev OIP2 KR2</title>
+  </head>
+  <body>
+  
+	<p style="font-size:19px;">&nbsp &nbsp &nbsp &nbsp Курсова работа на <b>Теодор Стилианов Добрев</b> &nbsp &nbsp &nbsp &nbsp &nbsp номер: <b>121217100 &nbsp &nbsp 38</b>гр. &nbsp &nbsp &nbsp &nbsp &nbsp по <b>ОИП2</b></p><br>
+  
+	<audio controls id="a" controls style="display:none;">
+		<source src="sounds/68437__pinkyfinger__piano-a.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="bb" controls style="display:none;">
+		<source src="sounds/68438__pinkyfinger__piano-b.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="b" controls style="display:none;">
+		<source src="sounds/68439__pinkyfinger__piano-bb.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="c" controls style="display:none;">
+		<source src="sounds/68441__pinkyfinger__piano-c.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="c1" controls style="display:none;">
+		<source src="sounds/68440__pinkyfinger__piano-c.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="d" controls style="display:none;">
+		<source src="sounds/68442__pinkyfinger__piano-d.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="e" controls style="display:none;">
+		<source src="sounds/68443__pinkyfinger__piano-e.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="eb" controls style="display:none;">
+		<source src="sounds/68444__pinkyfinger__piano-eb.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="f" controls style="display:none;">
+		<source src="sounds/68445__pinkyfinger__piano-f.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 <audio controls id="g" controls style="display:none;">
+		<source src="sounds/68447__pinkyfinger__piano-g.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	 
+	<script>
+	
+	//Changes the color of the pressed button
+	var element = "m5";
+	function changeColor() {
+        if(document.getElementById(element).getAttribute('specularColor')=='0.19216 0.20392 0.20392') {
+           document.getElementById(element).setAttribute('specularColor', '1 0 1');
+        } else {
+           document.getElementById(element).setAttribute('specularColor', '0.19216 0.20392 0.20392');
+		}
+		if(document.getElementById(element).getAttribute('diffuseColor')=='0.19216 0.20392 0.20392') {
+           document.getElementById(element).setAttribute('diffuseColor', '1 0 1');
+        } else {
+           document.getElementById(element).setAttribute('diffuseColor', '0.19216 0.20392 0.20392');
+		}
+    }
+	
+	// Destroyer of all colors of pressed buttons
+	function destroyer(elements) {
+		document.getElementById(elements).setAttribute('diffuseColor', '0.19216 0.20392 0.20392');
+		document.getElementById(elements).setAttribute('specularColor', '0.19216 0.20392 0.20392');
+	}
+	document.addEventListener('keyup', function(event) {
+		destroyer("m1");
+		destroyer("m2");
+		destroyer("m3");
+		destroyer("m4");
+		destroyer("m5");
+		destroyer("m6");
+		destroyer("m7");
+		destroyer("m8");
+		destroyer("m9");
+		destroyer("m10");
+	});
+	
+	// On pressed button it plays the sound and changes its color
+	document.addEventListener('keydown', function(event) {
+		if (event.keyCode == 49 || event.keyCode == 97) {
+			//alert('1 was pressed');
+			document.getElementById('g').load();
+			document.getElementById('g').play();
+			element = "m2";
+			changeColor();
+		}else if (event.keyCode == 50 || event.keyCode == 98) {
+			//alert('2 was pressed');
+			document.getElementById('a').load();
+			document.getElementById('a').play();
+			element = "m3";
+			changeColor();
+		}else if (event.keyCode == 51 || event.keyCode == 99) {
+			//alert('3 was pressed');
+			document.getElementById('b').load();
+			document.getElementById('b').play();
+			element = "m9";
+			changeColor();
+		}else if (event.keyCode == 52 || event.keyCode == 100) {
+			//alert('4 was pressed');
+			document.getElementById('bb').load();
+			document.getElementById('bb').play();
+			element = "m4";
+			changeColor();
+		}else if (event.keyCode == 53 || event.keyCode == 101) {
+			//alert('5 was pressed');
+			document.getElementById('c').load();
+			document.getElementById('c').play();
+			element = "m5";
+			changeColor();
+		}else if (event.keyCode == 54 || event.keyCode == 102) {
+			//alert('6 was pressed');
+			document.getElementById('c1').load();
+			document.getElementById('c1').play();
+			element = "m6";
+			changeColor();
+		}else if (event.keyCode == 55 || event.keyCode == 103) {
+			//alert('7 was pressed');
+			document.getElementById('d').load();
+			document.getElementById('d').play();
+			element = "m7";
+			changeColor();
+		}else if (event.keyCode == 56 || event.keyCode == 104) {
+			//alert('8 was pressed');
+			document.getElementById('eb').load();
+			document.getElementById('eb').play();
+			element = "m8";
+			changeColor();
+		}else if (event.keyCode == 57 || event.keyCode == 105) {
+			//alert('9 was pressed');
+			document.getElementById('e').load();
+			document.getElementById('e').play();
+			element = "m1";
+			changeColor();
+		}else if (event.keyCode == 48 || event.keyCode == 96) {
+			//alert('0 was pressed');
+			document.getElementById('f').load();
+			document.getElementById('f').play();
+			element = "m10";
+			changeColor();
+		}
+	}, true);
+	</script>
+	
+    <x3d id='someUniqueId' showStat='false' showLog='false' x='0px' y='0px' width='900px' height='600px'>
+      <scene>
+        
+        <anchor DEF='Import_assembly_f_piano_for_real_this_time_wrl'>
+		
+          <shape>
+            <appearance>
+              <material id ="m1" class="klav" DEF='material0' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.15874 0.05082 0.22382 0.15874 0.05082 0.23082 0.15874 0.12026 0.22382 0.15874 0.12026 0.23082 0.16849 0.05082 0.22382 0.16849 0.05082 0.23082 0.16849 0.12026 0.22382 0.16849 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+		 
+          <shape>
+			
+            <appearance>
+              <material id ="m2" class="klav" DEF='material2' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='-0.02526 0.05082 0.22382 -0.02526 0.05082 0.23082 -0.02526 0.12026 0.22382 -0.02526 0.12026 0.23082 -0.01551 0.05082 0.22382 -0.01551 0.05082 0.23082 -0.01551 0.12026 0.22382 -0.01551 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+			
+          </shape>
+		  
+		  </group>
+          <shape>
+            <appearance>
+              <material id ="m3" class="klav" DEF='material3' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='-0.00226 0.05082 0.22382 -0.00226 0.05082 0.23082 -0.00226 0.12026 0.22382 -0.00226 0.12026 0.23082 0.00749 0.05082 0.22382 0.00749 0.05082 0.23082 0.00749 0.12026 0.22382 0.00749 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material id ="m4" class="klav" DEF='material5' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.04374 0.05082 0.22382 0.04374 0.05082 0.23082 0.04374 0.12026 0.22382 0.04374 0.12026 0.23082 0.05349 0.05082 0.22382 0.05349 0.05082 0.23082 0.05349 0.12026 0.22382 0.05349 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material id ="m5" class="klav" DEF='material6' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.06674 0.05082 0.22382 0.06674 0.05082 0.23082 0.06674 0.12026 0.22382 0.06674 0.12026 0.23082 0.07649 0.05082 0.22382 0.07649 0.05082 0.23082 0.07649 0.12026 0.22382 0.07649 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material id ="m6" class="klav" DEF='material7' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.08974 0.05082 0.22382 0.08974 0.05082 0.23082 0.08974 0.12026 0.22382 0.08974 0.12026 0.23082 0.09949 0.05082 0.22382 0.09949 0.05082 0.23082 0.09949 0.12026 0.22382 0.09949 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material id ="m7" class="klav" DEF='material8' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.11274 0.05082 0.22382 0.11274 0.05082 0.23082 0.11274 0.12026 0.22382 0.11274 0.12026 0.23082 0.12249 0.05082 0.22382 0.12249 0.05082 0.23082 0.12249 0.12026 0.22382 0.12249 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material id ="m8" class="klav" DEF='material9' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.13574 0.05082 0.22382 0.13574 0.05082 0.23082 0.13574 0.12026 0.22382 0.13574 0.12026 0.23082 0.14549 0.05082 0.22382 0.14549 0.05082 0.23082 0.14549 0.12026 0.22382 0.14549 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material id ="m9" class="klav" DEF='material10' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.02074 0.05082 0.22382 0.02074 0.05082 0.23082 0.02074 0.12026 0.22382 0.02074 0.12026 0.23082 0.03049 0.05082 0.22382 0.03049 0.05082 0.23082 0.03049 0.12026 0.22382 0.03049 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material id ="m10" class="klav" DEF='material1' ambientIntensity='1' diffuseColor='0.19216 0.20392 0.20392' shininess='0.005' specularColor='0.19216 0.20392 0.20392'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='0 0 0 -1 0 0 0 -1 1 1 1 -1 1 1 1 -1 5 5 5 -1 5 5 5 -1 4 4 4 -1 4 4 4 -1 3 3 3 -1 3 3 3 -1 2 2 2 -1 2 2 2 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='1 3 0 -1 0 3 2 -1 5 1 4 -1 4 1 0 -1 7 5 6 -1 6 5 4 -1 3 7 2 -1 2 7 6 -1 5 7 1 -1 1 7 3 -1 6 4 2 -1 2 4 0 -1'>
+              <coordinate point='0.18174 0.05082 0.22382 0.18174 0.05082 0.23082 0.18174 0.12026 0.22382 0.18174 0.12026 0.23082 0.19149 0.05082 0.22382 0.19149 0.05082 0.23082 0.19149 0.12026 0.22382 0.19149 0.12026 0.23082'></coordinate>
+              <normal vector='-1 0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='0.19216 0.20392 0.20392'></color>
+            </indexedFaceSet>
+          </shape>
+          <shape>
+            <appearance>
+              <material DEF='material4' ambientIntensity='1' diffuseColor='230,172,0' shininess='0.2' specularColor='230,172,0'></material>
+            </appearance>
+            <indexedFaceSet creaseAngle='0.5236' normalIndex='4 4 4 -1 4 4 4 -1 5 5 5 -1 5 5 5 -1 5 5 5 -1 5 5 5 -1 1 1 1 -1 1 1 1 -1 2 2 2 -1 2 2 2 -1 3 3 3 -1 3 3 3 -1 1 1 1 -1 1 1 1 -1 3 3 3 -1 3 3 3 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' colorIndex='0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 -1' coordIndex='5 11 4 -1 4 11 10 -1 7 6 8 -1 8 6 10 -1 8 10 9 -1 9 10 11 -1 0 6 1 -1 1 6 7 -1 4 10 0 -1 0 10 6 -1 1 7 2 -1 2 7 8 -1 9 3 8 -1 8 3 2 -1 3 9 5 -1 5 9 11 -1 3 5 2 -1 2 5 4 -1 2 4 1 -1 1 4 0 -1'>
+              <coordinate point='-0.04026 0.04004 0.13382 -0.04026 0.04004 0.22382 -0.04026 0.12026 0.22382 -0.04026 0.12026 0.27382 -0.04026 0.20047 0.13382 -0.04026 0.20047 0.27382 0.21018 0.04004 0.13382 0.21018 0.04004 0.22382 0.21018 0.12026 0.22382 0.21018 0.12026 0.27382 0.21018 0.20047 0.13382 0.21018 0.20047 0.27382'></coordinate>
+              <normal vector='-1 -0 0 0 -1 0 0 0 -1 0 0 1 0 1 0 1 0 0'></normal>
+              <color color='1 1 1'></color>
+            </indexedFaceSet>
+          </shape>
+        </anchor>
+        <transform DEF='dad_Background1' translation='-0.248 -0.0857 0.35522'>
+          <background DEF='Background1' groundColor='0.21961 0.87059 0.61176' skyAngle='0.17453' skyColor='0.1098 0.59608 0.99216 0.01961 0.47451 0.98039' frontUrl='"wood_texture.jpg"'></background>
+        </transform>
+        <viewpoint DEF='Viewpoint1' description='Viewpoint1' orientation='0.968 -0.112 -0.223 0.862' position='0.04229 -0.07329 0.44399' fieldOfView='0.7854'></viewpoint>
+        <navigationInfo DEF='NavigationInfo1' type='"EXAMINE"'></navigationInfo>
+      </scene>
+    </x3d>
+	
+  </body>
+</html>
